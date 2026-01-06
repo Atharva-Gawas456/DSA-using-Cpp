@@ -76,6 +76,22 @@ int middle(Node* &head){
 	return slow->data;
 }
 
+void reverse(Node* &head){
+	Node* prev = NULL;
+	Node* curr = head;
+	Node* next = NULL;
+	
+	while(curr != NULL){
+		next = curr->next;
+		curr->next = prev;
+		
+		prev = curr;
+		curr = next;
+		
+	}
+	head = prev;
+	print(curr);
+}
 int main(){
 	Node* head = NULL;
 	
@@ -98,5 +114,9 @@ int main(){
 	print(head);
 	cout << endl;
 	pos(head, 40);
+	
+	reverse(head);
+	print(head);
+
 	return 0;
 }
