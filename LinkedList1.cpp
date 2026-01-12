@@ -92,6 +92,11 @@ void reverse(Node* &head){
 	head = prev;
 	print(curr);
 }
+
+void insert(Node* &head, int val, int pos){
+	Node* newNode = new Node(val);
+	
+}
 int main(){
 	Node* head = NULL;
 	
