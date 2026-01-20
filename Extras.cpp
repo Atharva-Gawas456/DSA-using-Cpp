@@ -3,6 +3,9 @@ using namespace std;
 
 
 int main(){
-	cout << min(4, 6);
+	int n = 5;
+	int sum = n * (n + 1) / 2;
+	
+	cout << sum;
 	return 0;
 }
